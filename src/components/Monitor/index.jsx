@@ -53,8 +53,8 @@ const Monitor = ({}) => {
                 {locos.map((data, index) => {
                     return (
                         <div onClick={e => setScreenIndex(index+1)} className={`navButton ${screenIndex == index+1 ? "active" : ""}`}>
-                            <img style={screenIndex == index+1 ? {display: "block", opacity: 1} : {display: "none", opacity: 0}} src={data.activeIcon} alt="" />
-                            <img style={screenIndex != index+1 ? {display: "block", opacity: 1} : {display: "none", opacity: 0}} src={data.icon} alt="" />
+                            <img style={screenIndex == index+1 ? {display: "block"} : {display: "none"}} src={data.activeIcon} alt="" />
+                            <img style={screenIndex != index+1 ? {display: "block"} : {display: "none"}} src={data.icon} alt="" />
                             <p>{data.name}</p>
                         </div>
                     )
