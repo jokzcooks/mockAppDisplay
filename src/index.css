@@ -6,7 +6,7 @@
 }
 
 .monitorWrapper {
-  width: 500px;
+  width: 50%;
   aspect-ratio: 1.13528855/1;
   display: flex;
   flex-flow: column;
@@ -22,9 +22,10 @@
 }
 
 .monitorWrapper > .monitorScreen {
+  z-index: 1;
   position: absolute;
-  width: 93.7%;
-  top: 3.5%;
+  width: 93.3110368%;
+  top: 3.7%;
   transition: opacity 0.3s linear;
   background-color: #171725;
   aspect-ratio: 1.5001601 / 1;

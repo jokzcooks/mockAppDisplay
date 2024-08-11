@@ -40,7 +40,7 @@ const Monitor = ({}) => {
     return (
         <div className="monitorWrapper">
             <img className="monitorImage" src={MonitorImage} alt="" />
-            <img className="monitorScreen" />
+            <img className="monitorScreen" style={{width: "100%", top: "0%"}} />
             {
                 [Screen1, Screen2, Screen3, Screen4, Screen5, Screen6].map((screen, index) => {
                     return (
