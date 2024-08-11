@@ -40,11 +40,11 @@ const Monitor = ({}) => {
     return (
         <div className="monitorWrapper">
             <img className="monitorImage" src={MonitorImage} alt="" />
+            <img className="monitorScreen" />
             {
                 [Screen1, Screen2, Screen3, Screen4, Screen5, Screen6].map((screen, index) => {
                     return (
-                        screenIndex == index+1 &&
-                        <img className="monitorScreen" src={screen} index={index + 1}/>
+                        <img style={screenIndex == index+1 ? {visibility: "visible", opacity: 1} : {visibility: "hidden", opacity: 0}} className="monitorScreen" src={screen} index={index + 1}/>
                     )
                 })
             }
