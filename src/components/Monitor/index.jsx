@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { CaptchaIcon, CaptchaIconActive, DashIcon, DashIconActive, MonitorImage, ProfilesIcon, ProfilesIconActive, ProxiesIcon, ProxiesIconActive, Screen1, Screen2, Screen3, Screen4, Screen5, Screen6, SettingsIcon, SettingsIconActive, TasksIcon, TasksIconActive } from "../Images"
 
 const Monitor = ({}) => {
@@ -44,7 +44,7 @@ const Monitor = ({}) => {
             {
                 [Screen1, Screen2, Screen3, Screen4, Screen5, Screen6].map((screen, index) => {
                     return (
-                        <img style={screenIndex == index+1 ? {visibility: "visible", opacity: 1} : {visibility: "hidden", opacity: 0}} className="monitorScreen" src={screen} index={index + 1}/>
+                        <img key={index} style={screenIndex == index+1 ? {opacity: 1} : {opacity: 0}} className="monitorScreen" src={screen} index={index + 1} loading="eager"/>
                     )
                 })
             }
